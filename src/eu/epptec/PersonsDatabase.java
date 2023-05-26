@@ -14,7 +14,6 @@ public class PersonsDatabase {
             validateName(person.getFirstName(), "First name");
             validateName(person.getLastName(), "Last name");
             validateBirthNumber(person.getBirthNumber());
-            System.out.println(convertBirthNumberToTenDigits(person.getBirthNumber()));
 
             if (database.containsKey(convertBirthNumberToTenDigits(person.getBirthNumber()))) {
                 throw new PersonAlreadyExistsException();
